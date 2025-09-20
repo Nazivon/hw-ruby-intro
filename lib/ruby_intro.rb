@@ -11,14 +11,7 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(arr, n)
-  arr.each_with_index do |num1, i|
-    arr.each_with_index do |num2, j|
-      if i < j && num1 + num2 == n
-          return true
-          end
-        end
-    end
-    return false
+  arr.combination(2).any? { |a, b| a + b == n }
 end
 
 # Part 2
