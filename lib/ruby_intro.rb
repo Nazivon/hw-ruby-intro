@@ -3,15 +3,22 @@
 # Part 1
 
 def sum(arr)
-  # YOUR CODE HERE
+  arr.sum
 end
 
 def max_2_sum(arr)
-  # YOUR CODE HERE
+  arr.max(2).sum
 end
 
 def sum_to_n?(arr, n)
-  # YOUR CODE HERE
+  arr.each_with_index do |num1, i|
+    arr.each_with_index do |num2, j|
+      if i < j && num1 + num2 == n
+          return true
+          end
+        end
+    end
+    return false
 end
 
 # Part 2
